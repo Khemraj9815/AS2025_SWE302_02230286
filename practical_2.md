@@ -77,9 +77,12 @@ func TestCreateUserHandler(t *testing.T) {
 ## Submission
 
 - **Terminal screenshot:** ![Terminal Screenshot](../AS2025_SWE302_PRACTICAL/assets/p2-1.png)
-- **Terminal screenshot:** ![Terminal Screenshot](../AS2025_SWE302_PRACTICAL/assets/p2-2.png)
-- **Terminal screenshot:** ![Terminal Screenshot](../AS2025_SWE302_PRACTICAL/assets/p2-3.png)
-- **Coverage UI screenshot:** ![Code Coverage UI](../AS2025_SWE302_PRACTICAL/assets/p2-4.png)
+![Terminal Screenshot](../AS2025_SWE302_PRACTICAL/assets/p2-2.png)
+![Terminal Screenshot](../AS2025_SWE302_PRACTICAL/assets/p2-3.png)
+-  **Coverage UI screenshot:** ![Code Coverage UI](../AS2025_SWE302_PRACTICAL/assets/p2-4.png)
+
+## Repository
+- [link to github Repository](https://github.com/Khemraj9815/SWE302/tree/main/go-crud-testing(practical%202))
 
 ## References
 
