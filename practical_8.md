@@ -153,7 +153,7 @@ Saving JSON outputs and artifacts:
 
 ---
 
-## Test Results (Executed Runs)
+## Test Results
 
 Note: below are example summaries derived from representative runs. Replace with your actual run screenshots and final numbers in submission.
 
@@ -183,6 +183,11 @@ Accessibility (aXe)
 Failures & Flaky Cases
 - Tests relying on the real external Dog CEO API occasionally flaked due to network variability or remote API rate-limiting.
 - Mitigation: use fixtures / intercepts for CI and longer-running suites.
+
+![test result](./assets/p8-1.png)
+![test result](./assets/p8-2.png)
+![test result](./assets/p8-3.png)
+![test result](./assets/p8-4.png)
 
 ---
 

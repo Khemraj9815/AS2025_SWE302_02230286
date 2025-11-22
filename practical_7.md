@@ -1,8 +1,4 @@
-# API Endpoint Test Report — Practical 7 (Dog Image Browser)
-
-Student: Khemraj9815  
-Test run date (local): 2025-11-18 18:48:53 UTC  
-Test script executed: tests/k6/api-endpoint-test.js
+# API Endpoint Test Report — Practical 7 
 
 ## 1. Purpose and Scope
 
@@ -34,6 +30,8 @@ Environment used:
 - BASE_URL: http://localhost:3000 (default)
 - k6 execution: local
 
+![dog](./assets/p7-1.png)
+
 Command used:
 - pnpm test:k6:api  (which runs `k6 run tests/k6/api-endpoint-test.js`)
 
@@ -57,9 +55,15 @@ Observed warning / error from runner:
 
 k6 version string not included in provided output (add `k6 version` next run to capture).
 
+![testttttt](./assets/p7-2.png)
+
+![test](./assets/p7-3.png)
+
+![test result](./assets/p7-4.png)
+
 ---
 
-## 4. Key Measured Metrics (from test output)
+## 4. Key Measured Metrics
 
 - http_req_duration (total request time)
   - avg = 429.61 ms
