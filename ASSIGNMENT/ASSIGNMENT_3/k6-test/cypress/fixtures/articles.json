@@ -1,0 +1,8 @@
+{
+  "sampleArticle": {
+    "title": "Test Article for E2E Testing",
+    "description": "This is a test article description",
+    "body": "This is the body of the test article. It contains multiple paragraphs and demonstrates the article functionality.",
+    "tagList": ["testing", "cypress", "e2e"]
+  }
+}
