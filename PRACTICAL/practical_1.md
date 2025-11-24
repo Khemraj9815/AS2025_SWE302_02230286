@@ -18,16 +18,16 @@ This practical involves building a straightforward quiz application using React.
 ## Screenshots
 
 Start Screen
-![Start](./assets/p1-2.png)  
+![Start](../assets/p1-2.png)  
 
 Quiz in Progress
-![Quiz](./assets/p1-3.png) 
-![prpgress](./assets/p1-4.png) 
+![Quiz](../assets/p1-3.png) 
+![prpgress](../assets/p1-4.png) 
 
 
 Score Report 
-![prpgress](./assets/p1-5.png) 
-![Score](./assets/p1-1.png) 
+![prpgress](../assets/p1-5.png) 
+![Score](../assets/p1-1.png) 
 
 
 ## Challenges Faced

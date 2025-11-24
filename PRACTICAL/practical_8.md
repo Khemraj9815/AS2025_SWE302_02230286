@@ -184,10 +184,10 @@ Failures & Flaky Cases
 - Tests relying on the real external Dog CEO API occasionally flaked due to network variability or remote API rate-limiting.
 - Mitigation: use fixtures / intercepts for CI and longer-running suites.
 
-![test result](./assets/p8-1.png)
-![test result](./assets/p8-2.png)
-![test result](./assets/p8-3.png)
-![test result](./assets/p8-4.png)
+![test result](../assets/p8-1.png)
+![test result](../assets/p8-2.png)
+![test result](../assets/p8-3.png)
+![test result](../assets/p8-4.png)
 
 ---
 

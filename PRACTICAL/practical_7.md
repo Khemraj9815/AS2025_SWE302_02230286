@@ -30,7 +30,7 @@ Environment used:
 - BASE_URL: http://localhost:3000 (default)
 - k6 execution: local
 
-![dog](./assets/p7-1.png)
+![dog](../assets/p7-1.png)
 
 Command used:
 - pnpm test:k6:api  (which runs `k6 run tests/k6/api-endpoint-test.js`)
@@ -55,11 +55,11 @@ Observed warning / error from runner:
 
 k6 version string not included in provided output (add `k6 version` next run to capture).
 
-![testttttt](./assets/p7-2.png)
+![testttttt](../assets/p7-2.png)
 
-![test](./assets/p7-3.png)
+![test](../assets/p7-3.png)
 
-![test result](./assets/p7-4.png)
+![test result](../assets/p7-4.png)
 
 ---
 
