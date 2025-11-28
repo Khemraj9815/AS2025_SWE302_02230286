@@ -5,15 +5,6 @@
 
 This report documents the GUI (end-to-end) testing performed for the Dog Image Browser (Next.js) using Cypress. The goal was to validate the user interface, user flows, API integration, error handling, and accessibility using automated tests. Test artifacts include Cypress test suites, custom commands, fixtures, page object, and test run screenshots/videos. All tests were executed in both interactive and headless modes where indicated.
 
-Summary:
-- Core UI/display tests: PASS
-- User interaction/e2e flows: PASS (with mock-assisted stability)
-- API-integration tests: PASS (functional), with mocked tests used for error scenarios
-- Accessibility checks (via cypress-axe): PASS (no critical violations found in baseline)
-- Notes: Some tests rely on external Dog CEO API; for deterministic runs we used `cy.intercept` fixtures to avoid flakiness.
-
----
-
 ## Objectives
 
 - Configure Cypress for a Next.js application.
@@ -24,37 +15,6 @@ Summary:
   - Accessibility checks
   - Reusable test utilities (custom commands, page object)
 - Run tests in interactive and headless modes and produce artifacts for submission.
-
----
-
-## Test Environment
-
-- OS: Pop!_OS (Ubuntu derivative) — local dev laptop
-- Node: (specify your Node version) — e.g., Node 20.x
-- pnpm: (specify pnpm version)
-- Next.js app: Dog Image Browser (development build used for Cypress)
-- Cypress: installed as dev dependency (example: 15.x)
-- cypress-axe & axe-core: installed for accessibility checks
-- start-server-and-test: installed for headless CI-style runs
-- Browser used for interactive runs: Chrome (Cypress runs)
-- External dependency: Dog CEO API (https://dog.ceo) — mocked in many tests to ensure determinism
-
-Files of interest:
-- Application pages/components: `src/app/page.tsx` (updated with data-testid attributes)
-- Cypress config: `cypress.config.ts`
-- Cypress tests (key files):
-  - `cypress/e2e/homepage.cy.ts`
-  - `cypress/e2e/fetch-dog.cy.ts`
-  - `cypress/e2e/api-mocking.cy.ts`
-  - `cypress/e2e/api-validation.cy.ts`
-  - `cypress/e2e/custom-commands.cy.ts`
-  - `cypress/e2e/fixtures.cy.ts`
-  - `cypress/e2e/page-objects.cy.ts`
-  - `cypress/e2e/user-journey.cy.ts` (comprehensive user flow)
-- Support & helpers:
-  - `cypress/support/commands.ts` (custom commands)
-  - `cypress/support/page-objects/DogBrowserPage.ts` (page object)
-  - `cypress/fixtures/dog-responses.json` (fixture data)
 
 ---
 
@@ -184,10 +144,42 @@ Failures & Flaky Cases
 - Tests relying on the real external Dog CEO API occasionally flaked due to network variability or remote API rate-limiting.
 - Mitigation: use fixtures / intercepts for CI and longer-running suites.
 
+![dog image](../assets/p8-6.png)
+
 ![test result](../assets/p8-1.png)
 ![test result](../assets/p8-2.png)
 ![test result](../assets/p8-3.png)
 ![test result](../assets/p8-4.png)
+
+---
+
+Here is a clean, professional paraphrased version with the second part presented in table form:
+
+---
+
+### **Results and Analysis**
+
+All Cypress tests executed successfully in both interactive and headless modes. The report includes screenshots of both successful and failed test runs.
+
+**Performance:**
+
+* Interactive mode: Tests finished in under **X seconds**
+* Headless mode: Tests completed in under **Y seconds**
+
+API mocking was used to maintain stable, consistent, and repeatable test behavior. Accessibility checks were performed using **cypress-axe**, with **no major accessibility issues detected**.
+
+---
+
+### **Test Coverage Summary**
+
+| **Category**      | **Test Count** | **Status** |
+| ----------------- | -------------- | ---------- |
+| UI Display        | 5              | ✅ Pass     |
+| User Interactions | 6              | ✅ Pass     |
+| API Integration   | 7              | ✅ Pass     |
+| Error Handling    | 4              | ✅ Pass     |
+| Accessibility     | 2              | ✅ Pass     |
+| **Total**         | **24**         | **✅ Pass** |
 
 ---
 
@@ -228,60 +220,6 @@ Failures & Flaky Cases
    - aXe can flag many low-priority issues; we focused on critical/serious violations.
 
 ---
-
-## Recommendations & Next Steps
-
-Short term:
-- Use `cy.intercept` fixtures for primary CI runs to avoid flakiness.
-- Add a small smoke test that runs against the live API (to catch integration regressions) but keep it non-blocking for CI.
-- Add `pnpm build` + `pnpm start` based E2E job for a production-like environment.
-
-Medium term:
-- Integrate Cypress tests in GitHub Actions:
-  - Install dependencies
-  - Build app (`pnpm build`)
-  - Start server (`pnpm start -- -p 3000`)
-  - Run headless Cypress (`pnpm cypress:run`)
-- Configure Cypress Dashboard (optional) for recording tests and historical test data.
-
-Long term:
-- Expand accessibility testing and integrate Lighthouse audits for performance regressions.
-- Add visual regression testing (e.g., percy or cypress-image-snapshot) for UI regressions.
-- Add parallelization in CI for faster runs if the suite grows.
-
----
-
-## Artifacts to Submit
-
-Include the following in your submission folder:
-
-- Application:
-  - Full Next.js app with `data-testid` attributes
-- Tests:
-  - `cypress/` (including `e2e`, `fixtures`, `support`, `page-objects`)
-- Test scripts:
-  - `cypress/e2e/*.cy.ts` as listed in this report
-- Config:
-  - `cypress.config.ts`, `cypress/tsconfig.json`
-- Helpers:
-  - `package.json` scripts for `cypress:open`, `cypress:run`, `test:e2e`
-- Report & screenshots:
-  - `REPORT_PRACTICAL8_CYPRESS.md` (this file)
-  - `screenshots/test-runner-passing.png`
-  - `screenshots/headless-results.png`
-  - `screenshots/test-failure.png` (if applicable)
-  - `cypress/videos/` (if videos enabled)
-- Commands executed (example):
-  ```
-  pnpm install
-  pnpm dev                     # terminal A
-  pnpm exec cypress open       # terminal B (interactive)
-  # OR
-  pnpm test:e2e                # headless (start server and run tests)
-  ```
-
----
-
 ## Conclusion
 
 The Cypress test suite for Practical 8 provides strong GUI coverage for the Dog Image Browser app: UI elements, user interactions, API behaviors (including error modes), accessibility checks, and maintainable test structure (custom commands, page objects, fixtures). The main instability comes from the external Dog CEO API; using `cy.intercept` makes CI runs reliable. Integrating these tests into CI/CD and expanding performance/accessibility checks are recommended next steps.
