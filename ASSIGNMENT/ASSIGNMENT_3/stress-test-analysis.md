@@ -110,10 +110,10 @@ I updated the stress-test.js script to include authentication and tags (see repo
 
 ## 8. Evidence to collect and include in your report
 - k6 terminal screenshot
-![stress test output](../screenshots/stress-test1.png)
+![stress test output](./screenshots/stress-test1.png)
 
 - k6 JSON results file
-![stress test output](../screenshots/stress-test2.png)
+![stress test output](./screenshots/stress-test2.png)
 
 
 ---

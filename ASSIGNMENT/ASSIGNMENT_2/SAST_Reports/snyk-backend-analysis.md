@@ -111,11 +111,3 @@ Upgrade to **v1.14.18** or newer.
 * Perform a full dependency audit to ensure no outdated or vulnerable transitive dependencies remain.
 
 ---
-
-# **Screenshots**
-
-Below are the embedded screenshots from the Snyk vulnerability scan:
-
-![Snyk Scan Summary](../assets/synktest.png)
-
-![Snyk Notification](../assets/notify.png)

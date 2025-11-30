@@ -53,13 +53,6 @@
 
 ---
 
-## Screenshots
-
-![Sonar Frontend Analysis](../assets/sonar_frontend.png)
-![Quality Gate Pass](../assets/gatepass.png)
-
----
-
 ## Summary
 
 The frontend codebase successfully passes the quality gate, demonstrating a stable baseline. However, several maintainability and best practice issues were identified:

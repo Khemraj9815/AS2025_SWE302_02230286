@@ -24,10 +24,10 @@ Quick verdict:
 
 Screenshots / evidence placeholders:
 - k6 terminal summary screenshot
-![load test](../screenshots/load-test1.png)  
+![load test](./screenshots/load-test1.png)  
 
 - JSON results file: k6-tests/load-test-results.json
-![load test result/JSON file](../screenshots/load-test2.png)
+![load test result/JSON file](./screenshots/load-test2.png)
 
 ---
 

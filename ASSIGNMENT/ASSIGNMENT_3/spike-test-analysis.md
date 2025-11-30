@@ -170,7 +170,7 @@ To make future runs easier to analyze:
 - Any Grafana / Prometheus charts you collected for the spike run
 
 Placeholders for images to insert into the report:
-- ![k6_spike_terminal](../screenshots/spike-test1.png)
+- ![k6_spike_terminal](./screenshots/spike-test1.png)
 
 ---
 

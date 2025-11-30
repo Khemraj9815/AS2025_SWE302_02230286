@@ -59,7 +59,3 @@
 The backend code passes the quality gate, demonstrating strong maintainability and reliability. Only two vulnerabilities were detected: SQL Injection and a hardcoded secret, both of which have clear remediation strategies. Technical debt is minimal, and four security hotspots have been identified for additional review and improvement.
 
 ---
-
-## Screenshot
-
-![Sonar Backend Analysis](../assets/sonar_backend.png)
